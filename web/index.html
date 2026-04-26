@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduBot — EdTech AI Assistant | PRJN26-127</title>
+  <meta name="description" content="EduBot: A CLI-inspired web chatbot for EdTech. Ask about courses, assignments, grades, schedules and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ── SIDEBAR ─────────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">EduBot</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose">✕</button>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-label">QUICK COMMANDS</p>
+      <div class="quick-btns" id="quickBtns"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-label">PROJECT INFO</p>
+      <div class="info-card">
+        <div class="info-row"><span>Roll No</span><span>PRJN26-127</span></div>
+        <div class="info-row"><span>Tech</span><span>Python / JS</span></div>
+        <div class="info-row"><span>Method</span><span>String Matching</span></div>
+        <div class="info-row"><span>Intents</span><span>24</span></div>
+        <div class="info-row"><span>Keywords</span><span>200+</span></div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-label">PLATFORM STATUS</p>
+      <div class="status-list">
+        <div class="status-item"><span class="dot green"></span>Learning Portal</div>
+        <div class="status-item"><span class="dot green"></span>Video Streaming</div>
+        <div class="status-item"><span class="dot green"></span>Assignment Portal</div>
+        <div class="status-item"><span class="dot green"></span>Student Database</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── MAIN ─────────────────────────────────────────────── -->
+  <div class="main" id="main">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <div class="topbar-title">
+        <span class="topbar-avatar">🤖</span>
+        <div>
+          <p class="topbar-name">EduBot Assistant</p>
+          <p class="topbar-sub">Optimization Strategies for Natural Language Interface</p>
+        </div>
+      </div>
+      <button class="clear-btn" id="clearBtn" title="Clear chat">🗑</button>
+    </header>
+
+    <!-- Chat window -->
+    <div class="chat-window" id="chatWindow">
+      <!-- Messages injected by JS -->
+    </div>
+
+    <!-- Typing indicator -->
+    <div class="typing-indicator" id="typingIndicator">
+      <span></span><span></span><span></span>
+      <p>EduBot is typing…</p>
+    </div>
+
+    <!-- Input bar -->
+    <div class="input-bar">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type a message… e.g. 'show status', 'list courses', 'help'"
+        autocomplete="off"
+        maxlength="200"
+      />
+      <button class="send-btn" id="sendBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <p class="footer-note">
+      PRJN26-127 · Optimization Strategies for Natural Language Interface for EdTech Infrastructure
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
